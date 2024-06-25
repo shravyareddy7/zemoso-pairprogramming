@@ -1,10 +1,11 @@
 import React from 'react';
 import { AppBar, Box, Toolbar, Stack } from '@mui/material';
-import LogoAndName from '../molecules/LogoAndName';
+import LogoAndName from '../molecules/IconAndText';
 import Location from '../molecules/Location';
 import SvgIconComponent from '../atoms/Icon';
 import CircularImageCard from '../atoms/Image';
-import {ICONS,ALT_TEXTS,ICON_SIZES} from "../../constants"
+import {ICONS,ALT_TEXTS,TEXTS,ICON_SIZES} from "../../constants"
+
 
 const HeaderComponent = () => {
   return (
@@ -12,10 +13,10 @@ const HeaderComponent = () => {
       <Toolbar>
         <Stack direction="row" alignItems="center" width="100%">
           <Box flexGrow={1}>
-            <LogoAndName/>
+            <LogoAndName iconSrc={ICONS.LEAF} iconAlt={ALT_TEXTS.LEAF_ICON} variant='h1' title={TEXTS.TITLE} />
           </Box>
           <Box>
-            <Location />
+            <Location location={TEXTS.LOCATION} />
           </Box>
           <Box flexGrow={3} display="flex" justifyContent="flex-end">
           <Box display='flex' flexDirection='row' alignItems='center' gap={2}>
